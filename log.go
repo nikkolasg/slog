@@ -106,3 +106,8 @@ func Debug(args ...interface{}) {
 func Debugf(str string, args ...interface{}) {
 	p(LevelDebug, fmt.Sprintf(str, args...))
 }
+
+func Fatal(args ...interface{}) {
+	p(LevelPrint, args...)
+	os.Exit(1)
+}
